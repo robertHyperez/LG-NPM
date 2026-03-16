@@ -1,14 +1,22 @@
 {
   "name": "lg-three-viewer",
   "version": "1.0.0",
-  "description": "Three.js 3D viewer engine for LG Chem e-Mobility showcase",
-  "main": "src/index.js",
+  "description": "Three.js 3D viewer engine",
+  "main": "dist/index.js",
   "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
   "peerDependencies": {
     "three": ">=0.150.0",
     "gsap": ">=3.0.0"
   },
-  "keywords": ["threejs", "3d", "viewer", "glb", "gltf"],
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "javascript-obfuscator": "^4.1.1"
+  },
+  "keywords": ["threejs", "3d", "viewer"],
   "license": "UNLICENSED",
-  "private": true
+  "files": ["dist"]
 }
